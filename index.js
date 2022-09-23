@@ -8,9 +8,7 @@ const cors=require("cors");
 
 app.use(cors());
 
-app.get("/",(req,res)=>{
-    res.json("server running")
-})
+
 
 
 require('dotenv').config();
@@ -31,6 +29,9 @@ const s3 = new AWS.S3({
     Body: null, // pass file body
 };
 
+app.get("/",(req,res)=>{
+    res.json({message:"server running"})
+})
 
 let storage=multer.diskStorage({
     destination:(req,file,cb)=>cb(null,'uploads/'),
