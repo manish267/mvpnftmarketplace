@@ -103,7 +103,7 @@ const fetchData=async ()=>{
 // fetchData();
 
 
-app.listen(5000,()=>{
+app.listen(5002,()=>{
     console.log("server started")
 })
 
